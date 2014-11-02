@@ -13,13 +13,17 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class ReviewExtractor {
-	private static String commentURL = "http://www.amazon.com/ss/customer-reviews/";
+	private static String reviewURL = "http://www.amazon.com/ss/customer-reviews/";
 	
 	public static void main(String[] args) throws IOException, JSONException{
-        Validate.isTrue(args.length == 1, "usage: supply url of product page on Amazon to fetch customer reviews");
-        String url = args[0];
-        
-        String productCode = url.substring(url.indexOf("dp")+3);
+        Validate.isTrue(args.length > 0, "usage: supply url of product page on Amazon to fetch customer reviews");
+        for(String url:args){
+        	extract(url);
+        }
+	}
+	
+	private static void extract(String url) throws IOException, JSONException{
+		String productCode = url.substring(url.indexOf("dp")+3);
         if(productCode.contains("/")){
             productCode = productCode.substring(0,productCode.indexOf("/"));
         }
@@ -27,7 +31,7 @@ public class ReviewExtractor {
         
         System.out.println("Fetching reviews of product code: " + productCode + "...");
         
-        Document doc = Jsoup.connect(commentURL + productCode).get();
+        Document doc = tryURL(reviewURL + productCode);
         
         int reviews = 0;
         
@@ -40,6 +44,21 @@ public class ReviewExtractor {
 		file.close();
 	}
 	
+	private static Document tryURL(String url){
+		Document doc = null;
+		int tries = 3;
+        while(tries != 0)
+        try{
+        	doc = Jsoup.connect(url).get();
+            break;
+        }
+        catch(IOException e){
+        	System.out.println("Error loading page. Trying again...");
+        	tries--;
+        }
+        return doc;
+	}
+	
 	private static boolean hasNext(Document doc){
 		if(doc.getElementsContainingOwnText("Next").first().attr("href").equals("")){
 			return false;
@@ -48,7 +67,7 @@ public class ReviewExtractor {
 	}
 	
 	private static Document getNext(Document doc) throws IOException{
-		return Jsoup.connect(doc.getElementsContainingOwnText("Next").first().attr("href")).get();
+		return tryURL(doc.getElementsContainingOwnText("Next").first().attr("href"));
 	}
 	
 	private static int extractReviews(Document doc, FileWriter file) throws JSONException, IOException{

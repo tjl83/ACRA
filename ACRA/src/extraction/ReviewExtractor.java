@@ -1,5 +1,6 @@
 package extraction;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -27,7 +28,7 @@ public class ReviewExtractor {
         if(productCode.contains("/")){
             productCode = productCode.substring(0,productCode.indexOf("/"));
         }
-        FileWriter file = new FileWriter("C:\\Users\\legolaptop\\git\\ACRA\\Reviews\\" + productCode + ".json");
+        FileWriter file = new FileWriter(new File("Reviews/" + productCode + ".txt"));
         
         System.out.println("Fetching reviews of product code: " + productCode + "...");
         

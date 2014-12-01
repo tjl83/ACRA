@@ -5,7 +5,10 @@
 	<classpathentry kind="lib" path="lib/doc/jsoup-1.8.1-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/src/jsoup-1.8.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/java-json.jar"/>
-	<classpathentry kind="lib" path="lib/jsoup-1.8.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jsoup-1.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/doc/stanford-corenlp-3.5.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/mod/stanford-corenlp-3.5.0-models.jar"/>
+	<classpathentry kind="lib" path="lib/src/stanford-corenlp-3.5.0-sources.jar"/>
+	<classpathentry kind="lib" path="lib/stanford-corenlp-3.5.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

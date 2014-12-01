@@ -1,0 +1,40 @@
+[{processedtextannotation:"use"}] [{processedtextannotation:"the"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"wet"}] [{processedtextannotation:/\Q"\E/}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"without"}] [{processedtextannotation:"the"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"with"}] [{processedtextannotation:"one"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"use"}] [{processedtextannotation:"this"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"try"}] [{processedtextannotation:"the"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"try"}] [{processedtextannotation:"to"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"use"}] [{processedtextannotation:"my"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"use"}] [{processedtextannotation:"a"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"time"}] [{processedtextannotation:"i"}]  (?$term [{tag:/VB.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{processedtextannotation:"old"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{processedtextannotation:"vacuum"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{processedtextannotation:"original"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"washable"}] [{patternlabel1:/\QB0012H549W-TERMS\E/}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"this"}] [{patternlabel1:/\QB0012H549W-TERMS\E/}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{processedtextannotation:"cleaning"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{processedtextannotation:"dry"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{processedtextannotation:"wet"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"use"}] [{patternlabel1:/\QB0012H549W-TERMS\E/}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"wet"}] [{processedtextannotation:"cleaning"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"wet"}] [{processedtextannotation:"jet"}]  (?$term [{ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{patternlabel1:/\QB0012H549W-TERMS\E/}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"purchase"}] [{processedtextannotation:"a"}]  (?$term [{ner:O}]{1,3})	1.0
+[{processedtextannotation:"wet"}] [{processedtextannotation:"refill"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"push"}] [{processedtextannotation:"the"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"pad"}] [{processedtextannotation:"to"}]  (?$term [{ner:O}]{1,3})	1.0
+[{processedtextannotation:"order"}] [{processedtextannotation:"the"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"need"}] [{processedtextannotation:"to"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"my"}] [{processedtextannotation:"second"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"old"}] [{processedtextannotation:"fashion"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"love"}] [{processedtextannotation:"this"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"mop"}] [{processedtextannotation:"and"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"love"}] [{processedtextannotation:"the"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"the"}] [{processedtextannotation:"extension"}]  (?$term [{ner:O}]{1,3})	1.0
+[{processedtextannotation:"my"}] [{processedtextannotation:"old"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"i"}] [{processedtextannotation:"now"}]  (?$term [{ner:O}]{1,3})	1.0
+[{processedtextannotation:"like"}] [{processedtextannotation:"this"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"like"}] [{processedtextannotation:"the"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0
+[{processedtextannotation:"i"}] [{processedtextannotation:"love"}]  (?$term [{ner:O}]{1,3})	1.0
+[{processedtextannotation:"lot"}] [{processedtextannotation:"of"}]  (?$term [{tag:/NN.*/} & {ner:O}]{1,3})	1.0

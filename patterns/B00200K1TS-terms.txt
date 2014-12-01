@@ -1,0 +1,5 @@
+read speed
+write speed
+plastic case
+device
+sd Card

@@ -1,5 +1,3 @@
-package snowball;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,10 +6,9 @@ import java.util.ArrayList;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.stanford.nlp.patterns.surface.GetPatternsFromDataMultiClass;
 import reader.JSONReader;
 
-public class Snowball {
+public class StuffRunner {
 	public static void main(String[] args) throws JSONException, IOException{
 		getReviews("B000WGD13U");
 		getReviews("B00DC7G2W8");

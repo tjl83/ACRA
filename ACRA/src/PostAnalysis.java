@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -22,17 +23,19 @@ public class PostAnalysis {
 		HashMap<String,HashSet<String>> productTerms = getTerms();
 		
 		HashMap<String,HashMap<String, ArrayList<String>>> productReviewSentances = getSentances();
-		for(String product:productReviewSentances.keySet()){
-			System.out.println(product + ":");
+		for(String productCode:productReviewSentances.keySet()){
+			FileWriter file = new FileWriter(new File("Reviews-Results/" + productCode + "-results.txt"));
+			System.out.println(productCode + ":");
 			
-			HashMap<String, ArrayList<String>> reviews = productReviewSentances.get(product);
-			HashSet<String> terms = productTerms.get(product);
+			HashMap<String, ArrayList<String>> reviews = productReviewSentances.get(productCode);
+			HashSet<String> terms = productTerms.get(productCode);
 			
 			int productCount = 0;
 			int bothCount = 0;
 			int serviceCount = 0;
 			
-			for(ArrayList<String> review:reviews.values()){
+			for(String user:reviews.keySet()){
+				ArrayList<String> review = reviews.get(user);
 				double termCount = 0;
 				for(String sentance:review){
 					for(String term:terms){
@@ -43,17 +46,30 @@ public class PostAnalysis {
 				}
 				
 				double productTermFrequency = termCount/(double)review.size();
+				String reviewCategory = "";
 				if(productTermFrequency < 0.3){
 					serviceCount++;
+					reviewCategory = "Service";
 				}
 				else if(productTermFrequency < 0.6){
 					bothCount++;
+					reviewCategory = "Both";
 				}
 				else{
 					productCount++;
+					reviewCategory = "Product";
 				}
+				
+				JSONObject resultReviewContainer = new JSONObject();
+				resultReviewContainer.append("Username",user);
+				resultReviewContainer.append("Review",review);
+				resultReviewContainer.append("Review Category",reviewCategory);
+				file.write(resultReviewContainer.toString());
+				file.write('\n');
+				file.flush();
 			}
 			
+			file.close();
 			System.out.println("Product: " + productCount);
 			System.out.println("Both: " + bothCount);
 			System.out.println("Service: " + serviceCount + "\n");

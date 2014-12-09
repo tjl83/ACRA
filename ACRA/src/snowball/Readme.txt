@@ -1,0 +1,1 @@
+Spent a really long time trying to write snowball from scratch. I was having a lot of trouble with that so I wrote DIPRE to try to use it to write Snowball

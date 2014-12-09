@@ -16,8 +16,15 @@ Analysis
 --------
 In our implementation we used a few seed words we thought were relevant to terms in the reviews that only describe the product. We did this manually. A better implementation would be to use the gold-standard reviews to extract these seeds which would then be used to more accurately extract those terms in the reviews that only describe the product.
 
-The results are in the directory \ACRA\stanford-corenlp-full-2014-10-31\SPIEDPatternsout\useNERRestriction where each products cumulative reviews' extract terms are in a folder labelled accordingly to their product number. These were run from the command-line which was based on the example as we had difficulty implementing the classes to extract those terms.
+The results are in the directory:
+
+\ACRA\stanford-corenlp-full-2014-10-31\SPIEDPatternsout\useNERRestriction
+
+where each products cumulative reviews' extract terms are in a folder labelled accordingly to their product number. These were run from the command-line which was based on the example as we had difficulty implementing the classes to extract those terms.
+
+We used the Stanford NLP Core which can be found at:
+http://nlp.stanford.edu/software/stanford-corenlp-full-2014-10-31.zip
 
 PostAnalysis
 ------------
-Finally the last part of this project is a simple counter which counts how many sentences are in each 
+Finally the last part of this project is a simple counter which counts how many sentences are in each review for each product. Then it counts how many of those sentences contains a term from the list of terms extracted during analysis.
